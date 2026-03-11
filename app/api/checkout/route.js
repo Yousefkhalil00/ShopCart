@@ -1,7 +1,10 @@
 import Stripe from "stripe";
 import { NextResponse } from "next/server";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
+// it's just a test page so i use test keys
 
 export async function POST(req) {
   try {
@@ -33,7 +36,7 @@ export async function POST(req) {
     console.error("Stripe Error:", error);
     return NextResponse.json(
       { error: "Error creating checkout session" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
