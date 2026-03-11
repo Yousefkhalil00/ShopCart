@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "cart": "Cart"
+  },
+  "home": {
+    "title": "Welcome To Our Store",
+    "subtitle": "Best Products At Best Prices"
+  },
+  "product": {
+    "addToCart": "Add To Cart",
+    "price": "Price"
+  }
+}
